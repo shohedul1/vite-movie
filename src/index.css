@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  @apply bg-neutral-900  text-neutral-300 p-0 m-0;
+
+}
