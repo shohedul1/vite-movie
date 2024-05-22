@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import Cart from './Cart';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
 
-const HorizontallScollCard = ({ data = [], heading,trending }) => {
+const HorizontallScollCard = ({ data = [], heading, trending,media_type }) => {
     const containerRef = useRef();
 
     const handleNext = () => {
@@ -30,7 +30,7 @@ const HorizontallScollCard = ({ data = [], heading,trending }) => {
                         style={{ scrollBehavior: 'smooth' }}
                     >
                         {data.map((item, index) => (
-                            <Cart key={item.id + "heading" + index} data={item} index={index + 1} trending={trending} />
+                            <Cart key={item.id + "heading" + index} data={item} index={index + 1} trending={trending} media_type={media_type}/>
                         ))}
                     </div>
                     <div className='absolute top-0 w-full h-full hidden lg:flex items-center justify-between px-5'>

@@ -11,21 +11,16 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
         children: [
-
             {
                 path: "",
                 element: <Home />
             },
             {
-                path: "tv",
+                path: ":explore",
                 element: <ExplorePage />
             },
             {
                 path: ":explore/:id",
-                element: <DetailsPage />
-            },
-            {
-                path: "movie",
                 element: <DetailsPage />
             },
             {
@@ -34,7 +29,7 @@ const router = createBrowserRouter([
             }
         ]
     }
-
 ]);
 
-export default router;
+export default router
+

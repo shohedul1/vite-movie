@@ -2,12 +2,14 @@ import moment from 'moment'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 
-const Cart = ({ data, index, trending }) => {
+const Cart = ({ data, index, trending, media_type }) => {
     const imageURL = useSelector(state => state.movieoData.imageURL);
+
+    const mediaType = data.media_type ?? media_type
 
 
     return (
-        <Link to={"/" + data.media_type + "/" + data.id} className='w-full max-w-[230px] min-w-[230px] h-80  overflow-hidden  rounded relative'>
+        <Link to={"/" + mediaType + "/" + data.id} className='w-full max-w-[230px] min-w-[230px] h-80  overflow-hidden  rounded relative'>
             <img src={imageURL + data?.poster_path} alt='image' />
             <div className='absolute top-4'>
                 {
